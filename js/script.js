@@ -40,7 +40,7 @@ var studsObj = [
     }
 ]
 
-for (var i = 0; i < studsObj.length; i++) {
+for (let i = 0; i < studsObj.length; i++) {
     for (let data in studsObj[i]) {
         console.log(`${data}: ${studsObj[i][data]}`);
     }
@@ -66,7 +66,7 @@ studsObj.push({
     'eta': eta
 });
 
-for (var i = 0; i < studsObj.length; i++) {
+for (let i = 0; i < studsObj.length; i++) {
     for (let data in studsObj[i]) {
         console.log(`${data}: ${studsObj[i][data]}`);
     }
