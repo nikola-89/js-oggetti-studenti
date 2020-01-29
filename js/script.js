@@ -49,6 +49,7 @@ for (let i = 0; i < studsObj.length; i++) {
 console.log('\n\n');
 // ***********
 console.log('Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.');
+
 var nome = prompt('Inserisci Nome:');
 var cognome = prompt('Inserisci Cognome:');
 var eta = prompt('Inserisci Età:');
@@ -68,6 +69,10 @@ studsObj.push({
 
 for (let i = 0; i < studsObj.length; i++) {
     for (let data in studsObj[i]) {
-        console.log(`${data}: ${studsObj[i][data]}`);
+        if (studsObj[i].nome == nome) {
+            console.log('--------------> ' + `${data}: ${studsObj[i][data]}`);
+        } else {
+            console.log(`${data}: ${studsObj[i][data]}`);
+        }
     }
 }
