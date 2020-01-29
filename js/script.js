@@ -1,4 +1,7 @@
 console.log('Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.');
+// ***********
+console.log('\n');
+// ***********
 var studObj = {
     'nome': 'Arthur',
     'cognome': 'Dent',
@@ -9,9 +12,12 @@ for (let data in studObj) {
     console.log(`${data}: ${studObj[data]}`);
 }
 // ***********
-console.log('\n\n');
+console.log('\n\n\n');
 // ***********
 console.log('Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome');
+// ***********
+console.log('\n');
+// ***********
 var studsObj = [
     {
         'nome': 'Mario',
@@ -46,10 +52,12 @@ for (let i = 0; i < studsObj.length; i++) {
     }
 }
 // ***********
-console.log('\n\n');
+console.log('\n\n\n');
 // ***********
 console.log('Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.');
-
+// ***********
+console.log('\n');
+// ***********
 var nome = prompt('Inserisci Nome:');
 var cognome = prompt('Inserisci Cognome:');
 var eta = prompt('Inserisci Età:');
