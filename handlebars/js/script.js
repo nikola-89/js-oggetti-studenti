@@ -27,8 +27,8 @@ function sendMessage() {
         }
         $('.msg-conversation').append(templateMessage(message)).scrollTop($('.msg-conversation').height());
         $('.msg-input input').val('');
-        }
         return true;
+        }
     $('.msg-input input').val('');
     return false;
 }
