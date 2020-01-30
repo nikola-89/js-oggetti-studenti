@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('.msg-input input').focus();
+    $('.msg-input input').effect('bounce', 'slow');
     $('.msg-input input').keydown(function() {
         if (event.which == 13) {
             if (sendMessage()) {
