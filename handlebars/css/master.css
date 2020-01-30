@@ -5,16 +5,13 @@
     font-family: 'Segoe UI', Fallback, sans-serif;
 }
 
-body {
-    overflow: hidden;
-}
-
 /* main-wrapper */
 .main-wrapper {
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(180deg ,#dddbd1 ,#d2dbdc);
 }
+
 .main-wrapper::after {
     content: "";
     height: 260px;
@@ -33,18 +30,17 @@ body {
     z-index: 1;
 }
 
+/* .message-box */
 .message-box {
     flex: 100%;
     overflow: hidden;
 }
 
 .msg-info-contact {
-    height: 55px;
-}
-
-.message-box .msg-info-contact {
     background-color: #ededed;
     padding: 6px 16px;
+    height: 55px;
+    border-bottom: 1px solid rgba(0 ,0 ,0 , .08);
 }
 
 .msg-info-contact .msg-info-contact-avatar img {
@@ -55,39 +51,27 @@ body {
     object-fit: cover;
 }
 
-.msg-info-contact .msg-info-contact-avatar {
-    height: 40px;
-    width: 40px;
-}
-
-.message-box .msg-info-contact-extra span {
+.msg-info-contact-extra span {
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 
-.message-box .msg-info-contact-extra span:not(:first-child) {
+.msg-info-contact-extra span:not(:first-child) {
     margin-left: 25px;
 }
 
-.message-box .msg-input input::placeholder {
+.msg-input input::placeholder {
     color: #bfbfbf;
 }
 
-.message .message-top .chevron-msg {
-    width: 18px;
-    height: 18px;
-}
-/* message-box */
-.message-box .msg-info-contact {
-    border-bottom: 1px solid rgba(0 ,0 ,0 , .08);
-}
-.message-box .msg-info-contact .msg-info-contact-name h4 {
+.msg-info-contact-name h4 {
     padding-left: 10px;
     font-size: 16px;
     font-weight: normal;
 }
-.message-box .msg-conversation {
+
+.msg-conversation {
     background-image: url("../img/background_conversation.jpg");
     background-repeat: repeat;
     background-position: center;
@@ -98,18 +82,18 @@ body {
     width: 100%;
     height: 100%;
 }
-.message-box .msg-input {
+
+.msg-input {
     width: 100%;
     background-color: #EDEDED;
     height: 62px;
 }
-.message-box .msg-input span {
-    margin: 0 20px;
+
+.msg-input span {
+    margin: 0 0 0 20px;
 }
-.message-box .msg-input span:first-of-type {
-    margin-right: 0;
-}
-.message-box .msg-input input {
+
+.msg-input input {
     width: 100%;
     height: 42px;
     background-color: #FFF;
@@ -119,9 +103,53 @@ body {
     margin: 0 20px;
     padding-left: 10px;
 }
-.message-box .msg-input input[type="text"] {
+
+.msg-input input[type="text"] {
     font-size: 15px;
     padding-left: 30px;
+}
+
+/* message */
+.message {
+    min-width: 80px;
+    max-width: 70%;
+    padding: 5px 5px;
+    margin: 1px;
+    border-radius: 7.5px;
+    box-shadow: 0 1px .5px rgba(0 ,0 ,0 , .13);
+}
+
+.message:first-child {
+    margin-top: 20px;
+}
+
+.message:last-child {
+    margin-bottom: 20px;
+}
+
+.message .message-top p {
+    word-wrap: break-word;
+    padding: 0 30px 0 10px;
+    font-size: 14.2px;
+}
+
+.message-bottom {
+    text-align: right;
+    font-size: 11px;
+    color: rgb(173, 173, 173);
+    margin: -10px 0 -5px 5px;
+}
+
+.msg-sent {
+    float: right;
+    clear: both;
+    background-color: #D1EBBC;
+}
+
+.msg-received {
+    float: left;
+    clear: both;
+    background-color: #FFF;
 }
 
 /* webkit-scrollbar */
@@ -133,58 +161,6 @@ body {
     background-color: rgba(0 ,0 ,0 , .2);
 }
 
-/* ******************* */
-.hidden {
-    display: none;
-}
-/* ******************* */
-
-/* message */
-.message {
-    min-width: 80px;
-    max-width: 70%;
-    padding: 5px 5px;
-    margin: 1px;
-    border-radius: 7.5px;
-    box-shadow: 0 1px .5px rgba(0 ,0 ,0 , .13);
-}
-.message:first-child {
-    margin-top: 20px;
-}
-.message:last-child {
-    margin-bottom: 20px;
-}
-.message .message-top {
-    position: relative;
-}
-.message .message-top p {
-    word-wrap: break-word;
-    padding: 0 30px 0 10px;
-    font-size: 14.2px;
-}
-.message .message-top .chevron-msg {
-    cursor: pointer;
-    position: absolute;
-    top: -3px;
-    right: 0;
-}
-.message-bottom {
-    text-align: right;
-    font-size: 11px;
-    color: rgb(173, 173, 173);
-    margin: -10px 0 -5px 5px;
-}
-.msg-sent {
-    float: right;
-    clear: both;
-    background-color: #D1EBBC;
-}
-.msg-received {
-    float: left;
-    clear: both;
-    background-color: #FFF;
-}
-
 /* *************************************************************** */
 @font-face {
     font-family: Segoe UI;
@@ -192,16 +168,10 @@ body {
         local("Segoe UI"),
         url('http://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2') format("woff2");
 }
+
 @media only screen and (max-width: 1200px) {
     .main-wrapper .app-wrapper{
         width: 100vw;
         height: 100vh;
-    }
-    .contacts-box {
-        flex: 35%;
-    }
-    .message-box,
-    .stay-connected-phone {
-        flex: 65%;
     }
 }
