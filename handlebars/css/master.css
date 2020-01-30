@@ -91,6 +91,7 @@
 
 .msg-input span {
     margin: 0 0 0 20px;
+    cursor: pointer;
 }
 
 .msg-input input {
