@@ -49,4 +49,4 @@ function addZero(number) {
         number = '0' + number;
     }
     return number;
-};
+}
